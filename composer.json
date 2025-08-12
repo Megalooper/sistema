@@ -1,0 +1,7 @@
+{
+    "require": {
+        "mike42/escpos-php": "^2.2",
+        "phpmailer/phpmailer": "^6.10",
+        "box/spout": "^3.3"
+    }
+}
