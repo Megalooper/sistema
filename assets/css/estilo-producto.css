@@ -1,0 +1,166 @@
+/* Estilos para productos y categorías */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    margin-bottom: 1.2rem;
+    color: #2c3e50;
+    font-size: 1.4rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid #f0f2f5;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e1e5eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #3498db;
+    color: white;
+}
+
+.btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background: #219653;
+    color: white;
+}
+
+.btn-secondary {
+    background: #95a5a6;
+    color: white;
+}
+
+.btn-danger {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.tabla-productos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabla-productos thead {
+    background-color: #f8f9fa;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.tabla-productos th,
+.tabla-productos td {
+    padding: 0.9rem;
+    text-align: left;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.tabla-productos tr:hover {
+    background-color: #f8f9fa;
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+}
+
+.acciones a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.editar {
+    color: #3498db;
+}
+
+.editar:hover {
+    color: #2980b9;
+}
+
+.eliminar {
+    color: #e74c3c;
+}
+
+.eliminar:hover {
+    color: #c0392b;
+}
+
+.success,
+.error {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-color: #2e7d32;
+}
+
+.error {
+    background: #ffebee;
+    color: #c62828;
+    border-color: #c62828;
+}

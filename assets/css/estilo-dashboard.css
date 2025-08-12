@@ -1,0 +1,407 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Sidebar - Diseño mejorado */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 70px;
+    background-color: #0A192F;
+    color: white;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 1rem;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar:hover {
+    width: 220px;
+    overflow: visible;
+}
+
+/* Logo e información de usuario */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Tamaño fijo para el icono de usuario - No cambia */
+.user-initial {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff11;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border: 2px solid #fff;
+    font-weight: bold;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    /* Eliminamos transiciones que podrían afectar el tamaño */
+    transition: none !important;
+}
+
+.username {
+    opacity: 0;
+    white-space: nowrap;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+    font-weight: 500;
+}
+
+#sidebar:hover .username {
+    opacity: 1;
+}
+
+/* Menú - Mejoras visuales */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.menu li {
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    margin: 5px 0;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#sidebar:hover .menu li {
+    justify-content: flex-start;
+    padding: 0.8rem 1.5rem;
+}
+
+.menu li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.menu li:hover:before {
+    left: 0;
+}
+
+.menu li.active {
+    background-color: #1A202C;
+    border-left: 4px solid #3498db;
+    font-weight: bold;
+}
+
+.menu li:hover {
+    background-color: rgba(26, 32, 44, 0.7);
+}
+
+.menu a {
+    color: #e0e0e0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: color 0.3s ease;
+    width: 100%;
+}
+
+.menu li:hover a {
+    color: #fff;
+}
+
+.menu i {
+    font-size: 1.3rem;
+    min-width: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Los iconos siempre son visibles */
+.menu i {
+    opacity: 1 !important;
+}
+
+.menu li:hover i {
+    transform: scale(1.2);
+    color: #3498db;
+}
+
+/* Iconos específicos con colores */
+.menu li:nth-child(1) i { color: #3498db; } /* Inicio */
+.menu li:nth-child(2) i { color: #2ecc71; } /* Productos */
+.menu li:nth-child(3) i { color: #f39c12; } /* Nueva Venta */
+.menu li:nth-child(4) i { color: #9b59b6; } /* Inventario */
+.menu li:nth-child(5) i { color: #1abc9c; } /* Reportes */
+.menu li:nth-child(6) i { color: #e74c3c; } /* Tasa de Cambio */
+.menu li:nth-child(7) i { color: #d35400; } /* Registrar Vendedor */
+.menu li:nth-child(8) i { color: #7f8c8d; } /* Cerrar Sesión */
+
+.menu li:hover i {
+    color: #fff !important;
+}
+
+.menu li:hover i {
+    color: #fff !important;
+}
+
+.nav-text {
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+#sidebar:hover .nav-text {
+    opacity: 1;
+}
+
+/* Content Area */
+#content {
+    margin-left: 70px;
+    transition: margin-left 0.3s ease;
+    padding: 1rem;
+}
+
+#sidebar:hover ~ #content {
+    margin-left: 220px;
+}
+
+/* Navbar */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+#navbar h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #2c3e50;
+}
+
+/* Información del usuario en navbar - Siempre visible */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: #f5f7fa;
+    border: 1px solid #e1e5eb;
+}
+
+.user-info:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tamaño fijo para el icono de usuario en navbar - No cambia */
+.user-info .user-initial {
+    width: 30px;
+    height: 30px;
+    background-color: #0A192F;
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    transition: none !important;
+}
+
+/* El nombre siempre es visible */
+.user-info span {
+    font-size: 0.95rem;
+    opacity: 1;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+/* Tarjetas generales */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    margin-bottom: 1.2rem;
+    color: #2c3e50;
+    font-size: 1.4rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid #f0f2f5;
+}
+
+/* Resumen general (métricas) */
+.overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.metric {
+    background-color: #f8fafc;
+    border-radius: 10px;
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    transition: all 0.3s ease;
+    border: 1px solid #edf2f7;
+}
+
+.metric:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #cbd5e0;
+}
+
+.metric i {
+    font-size: 1.8rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.metric i.fa-cubes { background-color: rgba(52, 152, 219, 0.1); color: #3498db; }
+.metric i.fa-list-ul { background-color: rgba(46, 204, 113, 0.1); color: #2ecc71; }
+.metric i.fa-chart-line { background-color: rgba(155, 89, 182, 0.1); color: #9b59b6; }
+.metric i.fa-exclamation-triangle { background-color: rgba(231, 76, 60, 0.1); color: #e74c3c; }
+
+.metric div {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric span {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-bottom: 0.3rem;
+}
+
+.metric strong {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.metric.alert {
+    background-color: #fff5f5;
+    border-color: #fed7d7;
+}
+
+/* Gráficos */
+#profit-expense-chart {
+    max-width: 100%;
+    height: auto !important;
+    background-color: #f8fafc;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.grafica {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tabla-propinas {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .tabla-propinas th, .tabla-propinas td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .tabla-propinas th {
+            background: #007bff;
+            color: white;
+        }
+        .tabla-propinas tr:hover {
+            background: #f8f9fa;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 0;
+        overflow: hidden;
+    }
+
+    #content {
+        margin-left: 0;
+    }
+
+    .overview {
+        grid-template-columns: 1fr;
+    }
+
+    .user-info span {
+        display: none;
+    }
+}

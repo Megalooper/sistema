@@ -1,0 +1,36 @@
+===== INICIO PETICIÓN =====
+Datos POST: {"nombre_pedido":"Mesa 01","turno":"10","productos":[{"id":15,"nombre":"7UP 350ml","precio":1,"tipo":"producto","cantidad":1}],"subtotal_usd":"1.00","base_imponible":"101.97","iva":"16.31","total_bs":"118.28"}
+ID Usuario: 0
+Búsqueda pedido: Array
+(
+    [id_pedido] => 3
+    [0] => 3
+    [estado] => espera
+    [1] => espera
+)
+
+Pedido guardado exitosamente ID: 3
+===== INICIO PETICIÓN =====
+Datos POST: {"nombre_pedido":"Mesa 01","turno":"10","productos":[{"id":15,"nombre":"7UP 350ml","precio":1,"tipo":"producto","cantidad":1}],"subtotal_usd":"1.00","base_imponible":"101.97","iva":"16.31","total_bs":"118.28"}
+ID Usuario: 0
+Búsqueda pedido: Array
+(
+    [id_pedido] => 3
+    [0] => 3
+    [estado] => espera
+    [1] => espera
+)
+
+Pedido guardado exitosamente ID: 3
+===== INICIO PETICIÓN =====
+Datos POST: {"nombre_pedido":"Mesa 01","turno":"10","productos":[{"id":15,"nombre":"7UP 350ml","precio":1,"tipo":"producto","cantidad":1}],"subtotal_usd":"1.00","base_imponible":"101.97","iva":"16.31","total_bs":"118.28"}
+ID Usuario: 0
+Búsqueda pedido: Array
+(
+    [id_pedido] => 3
+    [0] => 3
+    [estado] => espera
+    [1] => espera
+)
+
+Pedido guardado exitosamente ID: 3

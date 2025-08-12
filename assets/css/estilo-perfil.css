@@ -1,0 +1,247 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    color: #2c3e50;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid #f0f2f5;
+}
+
+/* Formulario */
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e1e5eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #fdfdfd;
+    color: #2c3e50;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #219653;
+}
+
+.btn-primary:hover {
+    background-color: #166534;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+/* Acciones de formulario */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Logo de empresa */
+.logo-preview {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo-preview img {
+    max-width: 120px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mensajes de éxito y error */
+.success,
+.error {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-color: #2e7d32;
+}
+
+.error {
+    background: #ffebee;
+    color: #c62828;
+    border-color: #c62828;
+}
+/* Estilos para el perfil de usuario */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 0.5rem;
+}
+
+/* Botones de prueba */
+.btn-test {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-test:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.btn-test:active {
+    transform: translateY(0);
+}
+
+/* Resultados de prueba */
+.test-result {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    display: none;
+}
+
+.test-success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-left: 4px solid #2e7d32;
+}
+
+.test-error {
+    background: #ffebee;
+    color: #c62828;
+    border-left: 4px solid #c62828;
+}
+
+.impresora-info {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.impresora-info i {
+    margin-right: 0.5rem;
+    color: #95a5a6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-control {
+        font-size: 0.9rem;
+    }
+    .form-actions {
+        flex-direction: column;
+    }
+}

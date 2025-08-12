@@ -1,0 +1,140 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general */
+body.login-body {
+    background: #f5f7fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor del formulario */
+.login-container {
+    max-width: 450px;
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 1rem;
+}
+
+/* Logo y título */
+.logo-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo-container i {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.logo-container h1 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* Grupos de formulario */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+/* Inputs */
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e1e5eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Botón de envío */
+.btn {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #3498db;
+    color: white;
+}
+
+.btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Enlace de registro */
+.registro-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+
+.registro-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.registro-link a:hover {
+    text-decoration: underline;
+}
+
+/* Mensajes de error y éxito */
+.error,
+.success {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.error {
+    background: #ffebee;
+    color: #c62828;
+    border-color: #c62828;
+}
+
+.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-color: #2e7d32;
+}
